@@ -1,16 +1,19 @@
 export const state = () => ({
-  client: {}
+  client: {},
+  allclients: []
 });
 
 export const mutations = {
   SET_CLIENT(state, payload) {
     state.client = payload;
+  },
+  SET_ALL_CLIENTS(state, payload) {
+    state.allclients = payload;
   }
 };
 
 export const actions = {
   fetchClient({ commit }, passport) {
-    console.log(passport, "store");
     return new Promise((resolve, reject) => {
       this.$axios
         .$get("clients", {
@@ -26,5 +29,35 @@ export const actions = {
           reject(e);
         });
     });
-  }
+  },
+  fetchAllClients({ commit }) {
+    return new Promise((resolve, reject) => {
+      this.$axios
+        .$get("clients")
+        .then(res => {
+          resolve(res);
+          commit("SET_ALL_CLIENTS", res);
+        })
+        .catch(e => {
+          reject(e);
+        });
+    });
+  },
+  filterAllClients({ commit }, passport) {
+    return new Promise((resolve, reject) => {
+      this.$axios
+        .$get("clients", {
+          params: {
+            passport
+          }
+        })
+        .then(res => {
+          resolve(res);
+          commit("SET_ALL_CLIENTS", res);
+        })
+        .catch(e => {
+          reject(e);
+        });
+    });
+  },
 };
