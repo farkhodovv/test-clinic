@@ -45,7 +45,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseUrl: "https://jizzax-shifo.herokuapp.com/"
+    baseUrl: "https://jizzax.herokuapp.com/"
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

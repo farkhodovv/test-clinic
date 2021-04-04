@@ -5,7 +5,9 @@
     </div>
     <div class="header">
       <div class="container">
-        <div class="row align-items-center justify-content-between">
+        <div
+          class="row align-items-center justify-content-between first-header"
+        >
           <div class="logo-wrap">
             <img src="/img/logo.svg" alt="tut logo" />
           </div>
@@ -24,7 +26,7 @@
                 />
               </svg>
             </i>
-            <span class="ml-2 phone__number">+998 90 324-5825</span>
+            <span class="ml-2 phone__number">+998 72 226 90 97</span>
           </a>
         </div>
       </div>
@@ -215,10 +217,10 @@ export default {
   },
   async mounted() {
     this.path = window.location.href;
-    if (!this.$route.query.id) {
-      // console.log(this.$route.query.id);
-      window.location.href = "https://jizzax-shifo.herokuapp.com/admin";
-    }
+    // if (!this.$route.query.id) {
+    //   // console.log(this.$route.query.id);
+    //   window.location.href = "https://jizzax-shifo.herokuapp.com/admin";
+    // }
   },
   computed: {
     ...mapState({
@@ -412,5 +414,53 @@ td {
 .footer {
   box-shadow: 0 0 5px rgb(black, 0.15);
   padding: 20px 0;
+}
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 20px;
+  }
+  .buttons {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center !important;
+
+    div {
+      margin-top: 20px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .phone {
+    display: none !important;
+  }
+  .first-header {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .buttons {
+    span {
+      width: 300px;
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .buttons {
+    span {
+      width: 250px;
+    }
+  }
+  h1 {
+    font-size: 16px;
+    text-align: center;
+  }
+  .body__qr {
+    display: flex;
+    flex-direction: column;
+  }
+  th p {
+    white-space: normal !important;
+  }
 }
 </style>
