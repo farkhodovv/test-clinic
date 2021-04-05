@@ -57,10 +57,12 @@
           <div
             class="body__header d-flex align-items-center flex-column justify-content-center pt-3"
           >
-            <p>
+            <b>
               Covid-19 Koronavirus infeksiyasiga tekshiruv natijalari haqida
-            </p>
-            <p>Справка о сдачи анализа на коронавирус Covid-19</p>
+            </b>
+            <h1>Ma'lumotnoma</h1>
+
+            <i>Справка о сдачи анализа на коронавирус Covid-19</i>
             <p>Certificate of testing for coronavirus Covid-19</p>
           </div>
           <div
@@ -152,18 +154,18 @@
 
           <div class="laboratory">
             <div>
-              <b
+              <i
                 >[UZ] COVID-19 koronavirusga tekshiruv O'zbekiston Respublikasi
                 Sog'liqni Saqlash Vazirligi Sanitariya-epiddemialogik
                 osoyishtalik Markazi bilan 04.08.2020yil tuzilgan No 1-7/2826
                 sonli shartnomaga asosan amalga oshirilgan.
-              </b>
-              <p>
+              </i>
+              <b>
                 [RUS]Тестирование на коронавирус COVID-19 проводилось в
                 соответствии с договором No 1-7/2826 от 04.08.2020г с Центром
                 Санитарно эпидемиологического надзора Министерства
                 Здравохранения РУз
-              </p>
+              </b>
               <p>
                 [EN] Testing for coronavirus Covid-19 was carried out in
                 accoradance with the contract No 1-7/2826 of 04.08.2020 with the
@@ -172,16 +174,6 @@
               </p>
             </div>
           </div>
-          <!-- <div class="laboratory mt-3">
-            <div>
-              <p>Head of laboratory:</p>
-              <p>
-                Лаборатория мудири:
-                <span class="doc">Gapparov Zufar Lapasovich</span>
-              </p>
-              <p>Заведующий лабораторий:</p>
-            </div>
-          </div> -->
           <div
             class="buttons d-flex mt-3 align-items-start justify-content-between"
           >
@@ -285,10 +277,11 @@ export default {
 }
 @media print {
   .body {
-    margin: 100px 0
+    margin: 150px 0;
   }
   @page {
     size: A4;
+    margin: 0;
   }
   .laboratory {
     display: block !important;
