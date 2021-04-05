@@ -63,6 +63,9 @@
           {{ data.item.date_birth }}
         </template>
         <template v-slot:cell(passport)="data">
+          <span>{{ data.item.passport }}</span>
+        </template>
+        <template v-slot:cell(id)="data">
           <nuxt-link :to="`/?id=${data.item.passport}`">
             <i>
               <svg
@@ -106,9 +109,10 @@ export default {
     fields: [
       { key: "index", label: "№" },
       { key: "full_name", label: "ISM/Familiya" },
-      { key: "phone", label: "Passport raqami" },
+      { key: "phone", label: "Telefon raqami" },
       { key: "date_birth", label: "Tugilgan sanasi" },
-      { key: "passport", label: "Chop etish" }
+      { key: "passport", label: "Passport raqami" },
+      { key: "id", label: "Batafsil" }
     ],
     path: ""
   }),
