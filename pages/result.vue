@@ -284,6 +284,9 @@ export default {
   margin-left: 50px;
 }
 @media print {
+  .body {
+    margin: 100px 0
+  }
   @page {
     size: A4;
   }
@@ -304,6 +307,9 @@ export default {
   }
   .body__qr {
     justify-content: flex-end !important;
+  }
+  .background-image {
+    display: none !important;
   }
 }
 h1 {
