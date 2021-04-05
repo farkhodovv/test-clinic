@@ -31,7 +31,7 @@
         </div>
       </div>
     </div>
-    <div class="print-header">
+    <!-- <div class="print-header">
       <div class="container">
         <div class="d-flex align-items-center justify-content-between">
           <span class="mr-4"
@@ -49,15 +49,19 @@
           >
         </div>
       </div>
-    </div>
+    </div> -->
     <div class="body">
       <img class="background-image" src="/img/bg.svg" alt="" />
       <div class="container">
         <div>
           <div
-            class="body__header d-flex align-items-center justify-content-center pt-3"
+            class="body__header d-flex align-items-center flex-column justify-content-center pt-3"
           >
-            <h1>Малумотнома | Справка | Reference</h1>
+            <p>
+              Covid-19 Koronavirus infeksiyasiga tekshiruv natijalari haqida
+            </p>
+            <p>Справка о сдачи анализа на коронавирус Covid-19</p>
+            <p>Certificate of testing for coronavirus Covid-19</p>
           </div>
           <div
             class="body__qr d-flex align-items-center justify-content-between"
@@ -73,9 +77,6 @@
           </div>
         </div>
         <div class="table">
-          <p class="text-center mb-2">
-            О результате проводимого теста на коронавирусную (Covid-19) инфекцию
-          </p>
           <table class="my-4" style="width:100% ; background:transparent;">
             <tr>
               <th>
@@ -151,12 +152,24 @@
 
           <div class="laboratory">
             <div>
-              <p>Name of laboratory:</p>
+              <b
+                >[UZ] COVID-19 koronavirusga tekshiruv O'zbekiston Respublikasi
+                Sog'liqni Saqlash Vazirligi Sanitariya-epiddemialogik
+                osoyishtalik Markazi bilan 04.08.2020yil tuzilgan No 1-7/2826
+                sonli shartnomaga asosan amalga oshirilgan.
+              </b>
               <p>
-                Лаборатория номи:
-                <span class="special">"JIZZAX SHIFO” klinikasi</span>
+                [RUS]Тестирование на коронавирус COVID-19 проводилось в
+                соответствии с договором No 1-7/2826 от 04.08.2020г с Центром
+                Санитарно эпидемиологического надзора Министерства
+                Здравохранения РУз
               </p>
-              <p>Наименование лаборатории:</p>
+              <p>
+                [EN] Testing for coronavirus Covid-19 was carried out in
+                accoradance with the contract No 1-7/2826 of 04.08.2020 with the
+                Center for Sanitary and Epidemiological Surveilance Ministry of
+                Health of the Republic of Uzbekistan
+              </p>
             </div>
           </div>
           <!-- <div class="laboratory mt-3">
@@ -286,6 +299,12 @@ export default {
   .buttons {
     display: none !important;
   }
+  .about {
+    display: none !important;
+  }
+  .body__qr {
+    justify-content: flex-end !important;
+  }
 }
 h1 {
   font-size: 32px;
@@ -394,22 +413,6 @@ td {
 }
 .body {
   position: relative;
-  &__header {
-    &::before {
-      content: "";
-      width: 20px;
-      height: 3px;
-      background: #007bff;
-      margin-right: 20px;
-    }
-    &::after {
-      content: "";
-      width: 20px;
-      height: 3px;
-      background: #e40044;
-      margin-left: 20px;
-    }
-  }
 }
 .footer {
   box-shadow: 0 0 5px rgb(black, 0.15);

@@ -67,7 +67,7 @@
         </template>
         <template v-slot:cell(id)="data">
           <div class="white-space">
-            <nuxt-link :to="`result/?id=${data.item.passport}`">
+            <nuxt-link :to="`/result/?id=${data.item.passport}`">
               <i>
                 <svg
                   width="24"
@@ -116,11 +116,12 @@ export default {
       { key: "passport", label: "Passport raqami" },
       { key: "id", label: "Batafsil" }
     ],
-    path: ""
+    path: "",
+    nice: false
   }),
   async mounted() {
     if (localStorage.getItem("login")) {
-      this.$router.push("/users");
+      this.nice === true
     } else {
       this.$router.push("/");
     }
