@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 .error {
   margin-top: 10px;
   color: red;
@@ -64,5 +64,15 @@ export default {
   box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.71);
   padding: 40px 15px;
   border-radius: 12px;
+}
+@media screen and (max-width: 576px) {
+  .phone {
+    display: none !important;
+  }
+  .first-header {
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+  }
 }
 </style>
