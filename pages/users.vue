@@ -63,10 +63,10 @@
           {{ data.item.date_birth }}
         </template>
         <template v-slot:cell(passport)="data">
-          <span>{{ data.item.passport }}</span>
+          <span>{{ data.item.passport }} </span>
         </template>
         <template v-slot:cell(id)="data">
-          <nuxt-link :to="`/?id=${data.item.passport}`">
+          <nuxt-link :to="`result/?id=${data.item.passport}`">
             <i>
               <svg
                 width="24"
@@ -117,6 +117,11 @@ export default {
     path: ""
   }),
   async mounted() {
+    if (localStorage.getItem("login")) {
+      this.$router.push("/users");
+    } else {
+      this.$router.push('/')
+    }
     await this.$store.dispatch("fetchAllClients");
   },
   methods: {
