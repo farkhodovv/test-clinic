@@ -8,9 +8,9 @@
         <div
           class="row align-items-center justify-content-between first-header"
         >
-          <div class="logo-wrap">
+          <nuxt-link to="/users" class="logo-wrap">
             <img src="/img/logo.svg" alt="tut logo" />
-          </div>
+          </nuxt-link>
           <a href="tel:+99890325825" class="phone">
             <i class="phone__icon">
               <svg
