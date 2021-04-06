@@ -283,11 +283,11 @@ export default {
 }
 @media print {
   .body {
-    margin: 150px 0;
+    margin: 200px 50px;
   }
   @page {
     size: A4;
-    margin: 0;
+    margin: 0 50px 0 30px;
   }
   .laboratory {
     display: block !important;
