@@ -3,7 +3,7 @@ export default {
   ssr: false, // Disable Server Side rendering
 
   head: {
-    title: 'clinic',
+    title: 'Jizzax Shifo',
     htmlAttrs: {
       lang: 'en'
     },
