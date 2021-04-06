@@ -68,10 +68,16 @@
           <div
             class="body__qr d-flex align-items-center justify-content-between"
           >
-            <div class="about">
-              <p>Ф.И.О пациента - {{ client.full_name }}</p>
-              <p>Дата рождения - {{ client.date_birth }}</p>
-              <p>Дата обследования - {{ client.date_tested }}</p>
+            <div class="laboratorys">
+              <div>
+                <p>Name of laboratory:</p>
+                <b>
+                  Laboratoriya nomi:
+                  <span class="special">"JIZZAX SHIFO” klinikasi</span>
+                </b>
+                <br />
+                <i>Наименование лаборатории:</i>
+              </div>
             </div>
             <div class="qr">
               <Vue-qr-code :value="path" />
@@ -83,7 +89,7 @@
             <tr>
               <th>
                 <p>Full name:</p>
-                <p>Фамилия, исм, шариф:</p>
+                <p>Familiya Ism Sharif:</p>
                 <p>Фамилия, имя, отечество:</p>
               </th>
               <td>
@@ -93,7 +99,7 @@
             <tr>
               <th>
                 <p>Date of birth:</p>
-                <p>Туғилган санаси:</p>
+                <p>Tug'ilgan sanasi:</p>
                 <p>Дата рождения:</p>
               </th>
               <td>
@@ -103,7 +109,7 @@
             <tr>
               <th>
                 <p>Passport series and number:</p>
-                <p>Паспорт серияси ва рақами:</p>
+                <p>Passport seriya va raqami:</p>
                 <p>Серия и номер паспорта:</p>
               </th>
               <td>
@@ -113,7 +119,7 @@
             <tr>
               <th>
                 <p>Phone number:</p>
-                <p>Телефон рақами:</p>
+                <p>Telefon raqami:</p>
                 <p>Номер телефона:</p>
               </th>
               <td>
@@ -123,7 +129,7 @@
             <tr>
               <th>
                 <p>Date tested:</p>
-                <p>Текширилган сана:</p>
+                <p>Tekshirilgan sana:</p>
                 <p>Дата тестирования:</p>
               </th>
               <td>
@@ -133,7 +139,7 @@
             <tr>
               <th>
                 <p>Research method:</p>
-                <p>Текширув усули:</p>
+                <p>Tekshiruv usuli:</p>
                 <p>Метод исследования:</p>
               </th>
               <td>
@@ -143,7 +149,7 @@
             <tr>
               <th>
                 <p>The result of laboratory analysis:</p>
-                <p>Лаборатор таҳлил натижаси:</p>
+                <p>Laborator taxlil natijasi:</p>
                 <p>Результат лабораного анализа:</p>
               </th>
               <td>
