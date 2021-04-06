@@ -68,7 +68,7 @@
           <div
             class="body__qr d-flex align-items-center justify-content-between"
           >
-            <div class="laboratorys">
+            <div class="about">
               <div>
                 <p>Name of laboratory:</p>
                 <b>
@@ -300,12 +300,6 @@ export default {
   }
   .buttons {
     display: none !important;
-  }
-  .about {
-    display: none !important;
-  }
-  .body__qr {
-    justify-content: flex-end !important;
   }
   .background-image {
     display: none !important;
