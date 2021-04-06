@@ -73,11 +73,11 @@
                 <p>Name of laboratory:</p>
                 <b>
                   Laboratoriya nomi:
-                  <span class="special">"JIZZAX SHIFO” klinikasi</span>
                 </b>
                 <br />
                 <i>Наименование лаборатории:</i>
               </div>
+              <span class="special">"JIZZAX SHIFO” klinikasi</span>
             </div>
             <div class="qr">
               <Vue-qr-code :value="path" />
@@ -417,7 +417,21 @@ td {
   box-shadow: 0 0 5px rgb(black, 0.15);
   padding: 20px 0;
 }
+
+.about {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 @media screen and (max-width: 767px) {
+  .body__qr {
+    flex-direction: column;
+
+    .about {
+      margin: 24px 0;
+    }
+  }
   h1 {
     font-size: 20px;
   }
@@ -432,7 +446,24 @@ td {
     }
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 575.98px) {
+  .about {
+    flex-direction: column;
+
+    .special {
+      margin: 14px 0 0 0;
+    }
+    * {
+      text-align: center;
+    }
+  }
+  .header {
+    padding: 8px 0;
+
+    .logo-wrap img {
+      width: 200px;
+    }
+  }
   .phone {
     display: none !important;
   }
@@ -446,8 +477,6 @@ td {
       width: 300px;
     }
   }
-}
-@media screen and (max-width: 576px) {
   .buttons {
     span {
       width: 250px;
