@@ -33,7 +33,7 @@ export const actions = {
   fetchAllClients({ commit }) {
     return new Promise((resolve, reject) => {
       this.$axios
-        .$get("clients")
+        .$get("clients?_sort=published_at:DESC")
         .then(res => {
           resolve(res);
           commit("SET_ALL_CLIENTS", res);
@@ -46,7 +46,7 @@ export const actions = {
   filterAllClients({ commit }, passport) {
     return new Promise((resolve, reject) => {
       this.$axios
-        .$get("clients", {
+        .$get("clients?_sort=published_at:DESC", {
           params: {
             passport
           }
