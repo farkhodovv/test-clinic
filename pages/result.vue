@@ -283,7 +283,7 @@ export default {
 }
 @media print {
   .body {
-    margin: 200px 50px;
+    margin: 250px 50px 150px 50px;
   }
   @page {
     size: A4;
@@ -403,12 +403,14 @@ td {
 }
 th,
 td {
-  padding: 5px;
+  vertical-align: middle;
+  padding: 15px;
+}
+th {
   text-align: left;
 }
 td {
   text-align: center;
-  vertical-align: middle;
 }
 .body {
   position: relative;
