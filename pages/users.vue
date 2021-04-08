@@ -177,6 +177,11 @@ export default {
     padding: 5px;
   }
 }
+table {
+  th, td {
+    vertical-align: middle;
+  }
+}
 .header {
   padding: 20px 0;
   box-shadow: 0 5px 10px rgb(black, 0.15);
