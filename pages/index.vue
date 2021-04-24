@@ -35,7 +35,11 @@ export default {
   methods: {
     checkPass() {
       if (this.login === "jizzaxshifo7696" && this.password === "jizzaxshifo7696") {
-        localStorage.setItem("login", this.login);
+        const formData = {
+          login: this.login,
+          password = this.password
+        }
+        localStorage.setItem("login", JSON.stringify(formData));
 
         this.$router.push("/users");
       } else {
@@ -48,7 +52,10 @@ export default {
   },
   mounted() {
     if (localStorage.getItem("login")) {
-      this.$router.push("/users");
+      const signInfo = JSON.parse(localStorage.getItem("login"))
+      if (signInfo.login === "jizzaxshifo7696" && signInfo.password === "jizzaxshifo7696" ) {
+        this.$router.push("/users");
+      }
     }
   }
 };
