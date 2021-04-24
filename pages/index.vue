@@ -34,7 +34,7 @@ export default {
   }),
   methods: {
     checkPass() {
-      if (this.login === "admin" && this.password === "1111") {
+      if (this.login === "jizzaxshifo7696" && this.password === "jizzaxshifo7696") {
         localStorage.setItem("login", this.login);
 
         this.$router.push("/users");
