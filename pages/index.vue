@@ -40,7 +40,7 @@ export default {
           password: this.password
         }
         localStorage.setItem("login", JSON.stringify(formData));
-
+        console.log("Succesfully, logged in");
         this.$router.push("/users");
       } else {
         this.counter = this.counter + 1;
