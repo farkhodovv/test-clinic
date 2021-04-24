@@ -1,6 +1,6 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
-  ssr: true, // Disable Server Side rendering
+  ssr: false, // Disable Server Side rendering
 
   head: {
     title: 'Jizzax Shifo',
