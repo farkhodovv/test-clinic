@@ -48,7 +48,7 @@ export const actions = {
       this.$axios
         .$get("clients?_sort=published_at:DESC", {
           params: {
-            passport
+            passport_contains
           }
         })
         .then(res => {

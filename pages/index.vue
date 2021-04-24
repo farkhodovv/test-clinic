@@ -37,7 +37,7 @@ export default {
       if (this.login === "jizzaxshifo7696" && this.password === "jizzaxshifo7696") {
         const formData = {
           login: this.login,
-          password = this.password
+          password: this.password
         }
         localStorage.setItem("login", JSON.stringify(formData));
 
