@@ -227,11 +227,17 @@ export default {
     await store.dispatch("fetchClient", route.query.id);
   },
   async mounted() {
-    this.path = window.location.href;
-    // if (!this.$route.query.id) {
-    //   // console.log(this.$route.query.id);
-    //   window.location.href = "https://jizzax-shifo.herokuapp.com/admin";
-    // }
+    if (localStorage.getItem("login")) {
+      const signInfo = JSON.parse(localStorage.getItem("login"));
+      if (
+        signInfo.login === "jizzaxshifo7696" &&
+        signInfo.password === "jizzaxshifo7696"
+      ) {
+        this.path = window.location.href;
+      } else {
+        this.$router.push("/");
+      }
+    }
   },
   computed: {
     ...mapState({

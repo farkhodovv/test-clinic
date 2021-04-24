@@ -121,11 +121,17 @@ export default {
   }),
   async mounted() {
     if (localStorage.getItem("login")) {
-      this.nice === true
-    } else {
-      this.$router.push("/");
+      const signInfo = JSON.parse(localStorage.getItem("login"));
+      if (
+        signInfo.login === "jizzaxshifo7696" &&
+        signInfo.password === "jizzaxshifo7696"
+      ) {
+        this.nice === true;
+      } else {
+        this.$router.push("/");
+      }
+      await this.$store.dispatch("fetchAllClients");
     }
-    await this.$store.dispatch("fetchAllClients");
   },
   methods: {
     async performSearch(query) {
@@ -178,7 +184,8 @@ export default {
   }
 }
 table {
-  th, td {
+  th,
+  td {
     vertical-align: middle;
   }
 }
