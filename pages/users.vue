@@ -131,6 +131,8 @@ export default {
         this.$router.push("/");
       }
       await this.$store.dispatch("fetchAllClients");
+    } else {
+      this.$router.push("/");
     }
   },
   methods: {

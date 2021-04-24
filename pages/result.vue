@@ -237,6 +237,8 @@ export default {
       } else {
         this.$router.push("/");
       }
+    } else {
+      this.$router.push("/");
     }
   },
   computed: {
