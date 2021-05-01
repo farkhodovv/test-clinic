@@ -123,8 +123,8 @@ export default {
     if (localStorage.getItem("login")) {
       const signInfo = JSON.parse(localStorage.getItem("login"));
       if (
-        signInfo.login === "jizzaxshifo7696" &&
-        signInfo.password === "jizzaxshifo7696"
+        signInfo.login === "dilshodoqilov777" &&
+        signInfo.password === "dilshodoqilov777"
       ) {
         this.nice === true;
       } else {
