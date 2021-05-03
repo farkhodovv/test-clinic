@@ -227,19 +227,7 @@ export default {
     await store.dispatch("fetchClient", route.query.id);
   },
   async mounted() {
-    if (localStorage.getItem("login")) {
-      const signInfo = JSON.parse(localStorage.getItem("login"));
-      if (
-        signInfo.login === "dilshodoqilov777" &&
-        signInfo.password === "dilshodoqilov777"
-      ) {
-        this.path = window.location.href;
-      } else {
-        this.$router.push("/");
-      }
-    } else {
-      this.$router.push("/");
-    }
+    this.path = window.location.href;
   },
   computed: {
     ...mapState({
