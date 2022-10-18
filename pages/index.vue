@@ -34,7 +34,7 @@ export default {
   }),
   methods: {
     checkPass() {
-      if (this.login === "dilshodoqilov777" && this.password === "dilshodoqilov777") {
+      if (this.login === "rasulusmonov0000" && this.password === "rasulusmonov0000") {
         const formData = {
           login: this.login,
           password: this.password
@@ -53,7 +53,7 @@ export default {
   mounted() {
     if (localStorage.getItem("login")) {
       const signInfo = JSON.parse(localStorage.getItem("login"))
-      if (signInfo.login === "dilshodoqilov777" && signInfo.password === "dilshodoqilov777" ) {
+      if (signInfo.login === "rasulusmonov0000" && signInfo.password === "rasulusmonov0000" ) {
         this.$router.push("/users");
       }
     }

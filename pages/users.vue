@@ -1,33 +1,5 @@
 <template>
   <div>
-    <div class="header">
-      <div class="container">
-        <div
-          class="row align-items-center justify-content-between first-header"
-        >
-          <div class="logo-wrap">
-            <img src="/img/logo.svg" alt="tut logo" />
-          </div>
-          <a href="tel:+99890325825" class="phone">
-            <i class="phone__icon">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 14 14"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M11.5707 8.70285C10.904 8.70285 10.2494 8.59858 9.62915 8.39359C9.3252 8.28992 8.95155 8.38503 8.76604 8.57556L7.54169 9.49981C6.1218 8.74187 5.24718 7.86753 4.49959 6.45829L5.39664 5.26585C5.62971 5.0331 5.7133 4.6931 5.61315 4.37409C5.40728 3.75053 5.3027 3.09626 5.3027 2.42932C5.30273 1.94751 4.91076 1.55554 4.42898 1.55554H2.42929C1.94751 1.55554 1.55554 1.94751 1.55554 2.42929C1.55554 7.95172 6.04827 12.4444 11.5707 12.4444C12.0525 12.4444 12.4444 12.0525 12.4444 11.5707V9.57657C12.4444 9.09482 12.0524 8.70285 11.5707 8.70285Z"
-                  fill="white"
-                />
-              </svg>
-            </i>
-            <span class="ml-2 phone__number">+998 72 226 90 97</span>
-          </a>
-        </div>
-      </div>
-    </div>
     <div class="body container mt-3">
       <div class="body__header d-flex justify-content-center">
         <h1>Тест топширганлар руйхати</h1>
@@ -123,8 +95,8 @@ export default {
     if (localStorage.getItem("login")) {
       const signInfo = JSON.parse(localStorage.getItem("login"));
       if (
-        signInfo.login === "dilshodoqilov777" &&
-        signInfo.password === "dilshodoqilov777"
+        signInfo.login === "rasulusmonov0000" &&
+        signInfo.password === "rasulusmonov0000"
       ) {
         this.nice === true;
       } else {
