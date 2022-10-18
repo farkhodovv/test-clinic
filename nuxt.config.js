@@ -53,6 +53,12 @@ export default {
     babel: {
       compact: true,
      },
+     bootstrapVue: {
+      icons: false  
+    },
+    bootstrap: {
+      icons: false
+    },
     postcss: null,
     target: 'static'
   }
