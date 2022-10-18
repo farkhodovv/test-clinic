@@ -1,6 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: false, // Disable Server Side rendering
+  target: 'static',
 
   head: {
     title: 'Clinics.uz',
