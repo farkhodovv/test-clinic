@@ -21,7 +21,7 @@
         <div class="content-wrapper px-md-4 py-2">
             <div class="content-header">
                     <div class="d-flex flex-md-row flex-column justify-content-between">
-            <h1 class="m-0 text-dark">Пациент: {{ client.full_name }}</h1>
+            <h1 class="m-0 text-dark">Пациент: {{ client.attributes.full_name }}</h1>
             <div class>
                 <button type="button" onclick="print();" class="btn btn-info">
                     <i class="fas fa-print"></i> Распечатать
@@ -80,29 +80,29 @@
                                         <div class="my-1">
                             <h5>
                                 <strong>Passport / Серия и номер паспорта: </strong>
-                                <span>{{ client.passport }}</span>
+                                <span>{{ client.attributes.passport }}</span>
                             </h5>
                         </div>
                                     <div class="my-1">
                         <h5>
                             <strong>Full name / Полное имя
                                 : </strong>
-                            <span>{{ client.full_name }}</span>
+                            <span>{{ client.attributes.full_name }}</span>
                         </h5>
                     </div>
                     <div class="my-1">
                         <h5>
                             <strong>Birth date / Дата рождения
                                 : </strong>
-                            <span>{{ client.date_birth }}</span>
+                            <span>{{ client.attributes.date_birth }}</span>
                         </h5>
                     </div>
-                    <div class="my-1" v-if="client.gender">
+                    <div class="my-1" v-if="client.attributes.gender">
                         <h5>
                             <strong>Sex / Пол
                                 : </strong>
                             <span>
-                                        {{ client.gender }}
+                                        {{ client.attributes.gender }}
                                     </span>
                         </h5>
                     </div>
@@ -111,7 +111,7 @@
                             <strong>Analysis date / Дата сдачи анализа
                                 : </strong>
                             <span>
-                                {{ new Date(client.createdAt).toISOString().substring(0, 10) }}
+                                {{ new Date(client.attributes.createdAt).toISOString().substring(0, 10) }}
                             </span>
                         </h5>
                     </div>
@@ -122,7 +122,7 @@
                             </h5>
                             <h4>
                                 <span>Negative / Отрицательный</span> 
-                                <strong>({{ new Date(client.createdAt).toISOString().substring(0, 10) }})</strong>
+                                <strong>({{ new Date(client.attributes.createdAt).toISOString().substring(0, 10) }})</strong>
                             </h4>
                         </div>
                         <div class="row my-2">

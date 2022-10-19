@@ -9,7 +9,7 @@
           <div>
             <b-form-input
               v-model="search"
-              placeholder="qidirish ..."
+              placeholder="ism bo'yicha qidirish ..."
             ></b-form-input>
           </div>
         </div>
@@ -39,7 +39,7 @@
         </template>
         <template v-slot:cell(id)="data">
           <div class="white-space">
-            <nuxt-link :to="`/result/?id=${data.item.passport}`">
+            <nuxt-link :to="`/result/?id=${data.item.id}`">
               <i>
                 <svg
                   width="24"
@@ -82,10 +82,10 @@ export default {
     search: "",
     fields: [
       { key: "index", label: "№" },
-      { key: "full_name", label: "ISM/Familiya" },
-      { key: "phone", label: "Telefon raqami" },
-      { key: "date_birth", label: "Tugilgan sanasi" },
-      { key: "passport", label: "Passport raqami" },
+      { key: "attributes.full_name", label: "ISM/Familiya" },
+      { key: "attributes.phone", label: "Telefon raqami" },
+      { key: "attributes.date_birth", label: "Tugilgan sanasi" },
+      { key: "attributes.passport", label: "Passport raqami" },
       { key: "id", label: "Batafsil" }
     ],
     path: "",
