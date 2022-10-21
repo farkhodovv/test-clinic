@@ -111,7 +111,7 @@
                             <strong>Analysis date / Дата сдачи анализа
                                 : </strong>
                             <span>
-                                {{ new Date(client.attributes.createdAt).toISOString().substring(0, 10) }}
+                                {{ $dayjs(client.attributes.date_tested).format('YYYY/MM/DD hh:mm') }}
                             </span>
                         </h5>
                     </div>
@@ -122,7 +122,7 @@
                             </h5>
                             <h4>
                                 <span>Negative / Отрицательный</span> 
-                                <strong>({{ new Date(client.attributes.createdAt).toISOString().substring(0, 10) }})</strong>
+                                <strong>{{ $dayjs(client.attributes.date_tested).format('YYYY/MM/DD') }}</strong>
                             </h4>
                         </div>
                         <div class="row my-2">

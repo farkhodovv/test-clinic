@@ -25,18 +25,6 @@
         <template v-slot:cell(index)="data">
           <div>{{ data.index + 1 }}</div>
         </template>
-        <template v-slot:cell(full_name)="data">
-          {{ data.item.full_name }}
-        </template>
-        <template v-slot:cell(phone)="data">
-          {{ data.item.phone }}
-        </template>
-        <template v-slot:cell(date_birth)="data">
-          {{ data.item.date_birth }}
-        </template>
-        <template v-slot:cell(passport)="data">
-          <span>{{ data.item.passport }} </span>
-        </template>
         <template v-slot:cell(id)="data">
           <div class="white-space">
             <nuxt-link :to="`/result/?id=${data.item.id}`">
