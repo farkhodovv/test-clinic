@@ -9,7 +9,7 @@
           <div>
             <b-form-input
               v-model="search"
-              placeholder="ism bo'yicha qidirish ..."
+              placeholder="ism bo'yicha qidirish ...."
             ></b-form-input>
           </div>
         </div>
