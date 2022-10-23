@@ -111,7 +111,7 @@
                             <strong>Analysis date / Дата сдачи анализа
                                 : </strong>
                             <span>
-                                {{ $dayjs(client.attributes.date_tested).format('YYYY/MM/DD hh:mm') }}
+                                {{ $dayjs(client.attributes.date_tested).format('YYYY/MM/DD HH:MM') }}
                             </span>
                         </h5>
                     </div>
